@@ -1,3 +1,5 @@
+console.log('initial location:', this.location);
+
 window.addEventListener('popstate', e => {
   console.log(e);
   console.log(location, location.pathname);
@@ -19,7 +21,7 @@ links.forEach(link => {
 const nativePushState = history.pushState.bind(history);
 history.pushState = function(data, unused, url) {
   console.log('pushState', data, url);
-  
+
   nativePushState({
     ...data,
     debug: true
