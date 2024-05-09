@@ -7,7 +7,6 @@ window.addEventListener('popstate', e => {
 })
 
 const links = document.querySelectorAll('#nav a')
-console.log(links);
 links.forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
